@@ -535,7 +535,7 @@ footer { background: #0b111a; color: white; padding: 100px var(--side-margin) 40
 .footer-col li { margin-bottom: 15px; }
 .footer-col a { color: #9CA3AF; text-decoration: none; transition: 0.3s; }
 .footer-col a:hover { color: var(--accent); padding-left: 5px; }
-.copyright { text-align: center; padding-top: 40px; color: #6B7280; font-size: 0.85rem; letter-spacing: 1px; }
+.copyright { text-align: center; padding-top: 40px; color: #94A3B8 !important; font-size: 0.85rem; letter-spacing: 0.5px; opacity: 1 !important; visibility: visible !important; display: block !important; }
 
 /* --- Deadlines Section Styles --- */
 .deadlines { background: var(--primary); color: var(--white); padding: 120px var(--side-margin); }

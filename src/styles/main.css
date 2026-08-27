@@ -226,7 +226,7 @@ footer { background: #0a0a0a; color: white; padding: 100px 6% 40px; }
 .footer-col a { color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s; }
 .footer-col a:hover { color: var(--gold); padding-left: 5px; }
 
-.copyright { text-align: center; padding-top: 40px; opacity: 0.4; font-size: 0.85rem; letter-spacing: 1px; }
+.copyright { text-align: center; padding-top: 40px; color: #94A3B8 !important; opacity: 1 !important; font-size: 0.85rem; letter-spacing: 0.5px; visibility: visible !important; display: block !important; }
 
 /* --- ABOUT SECTION --- */
 .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
