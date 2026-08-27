@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal & Registration Dashboard | IS³A³ 2026</title>
+    <link rel="icon" href="src/assets/logos/tulogo.png" type="image/png">
+
+    <!-- CSS Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Dashboard Styling -->
+    <link rel="stylesheet" href="src/styles/admin.css">
+</head>
+
+<body class="admin-body">
+
+    <!-- =======================================================================
+         1. PASSCODE LOGIN LOCK SCREEN
+         ======================================================================= -->
+    <div class="admin-login-overlay" id="admin-login-overlay">
+        <div class="admin-login-card">
+            <div class="login-card-header">
+                <div class="logo-badge">
+                    <img src="src/assets/logos/tulogo.png" alt="TU Logo">
+                </div>
+                <h3>IS³A³ 2026 Admin Portal</h3>
+                <p>Secretariat & Registration Management Console</p>
+            </div>
+            <div class="login-card-body">
+                <form id="admin-login-form">
+                    <div class="login-passcode-input">
+                        <label style="font-size: 0.85rem; font-weight: 700; color: var(--admin-navy); margin-bottom: 8px; display: block;">
+                            <i class="fas fa-lock me-1 text-warning"></i> Enter Secretariat Passcode
+                        </label>
+                        <input type="password" id="admin-passcode-input" placeholder="Passcode (Default: is3a3@2026)" required autofocus>
+                    </div>
+                    <button type="submit" class="btn-admin-login">
+                        <i class="fas fa-sign-in-alt"></i> Access Dashboard
+                    </button>
+                    <p style="text-align: center; margin: 15px 0 0 0; font-size: 0.75rem; color: var(--admin-muted);">
+                        Authorized personnel only • Dept. of CSE, Tezpur University
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         2. DASHBOARD TOP NAVIGATION
+         ======================================================================= -->
+    <header class="admin-navbar">
+        <div class="admin-nav-left">
+            <img src="src/assets/logos/LOGO2.png" alt="IS3A3 Logo" class="admin-nav-logo">
+            <div class="admin-nav-title">
+                <h1>IS³A³ 2026 Registration Console</h1>
+                <span>Department of Computer Science & Engineering, Tezpur University</span>
+            </div>
+        </div>
+
+        <div class="admin-nav-right">
+            <div class="sync-status-badge" id="sync-status-indicator">
+                <span class="sync-dot"></span> System Connected
+            </div>
+            <a href="registration-form.html" target="_blank" class="btn-admin-logout" style="text-decoration: none;" title="Open Registration Form in new tab">
+                <i class="fas fa-external-link-alt me-1"></i> Form View
+            </a>
+            <button type="button" class="btn-admin-logout" id="btn-admin-logout" title="Lock and exit dashboard">
+                <i class="fas fa-power-off me-1"></i> Logout
+            </button>
+        </div>
+    </header>
+
+    <!-- =======================================================================
+         3. MAIN DASHBOARD CONTENT
+         ======================================================================= -->
+    <main class="admin-main-wrapper">
+        
+        <!-- KPI METRICS GRID -->
+        <section class="kpi-grid">
+            
+            <div class="kpi-card">
+                <div class="kpi-icon-wrap navy">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="kpi-info">
+                    <div class="kpi-label">Total Registrations</div>
+                    <div class="kpi-val" id="kpi-total-registrations">0</div>
+                    <div class="kpi-sub">Across Indian & International Tracks</div>
+                </div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-icon-wrap gold">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <div class="kpi-info">
+                    <div class="kpi-label">Total Revenue Inflows</div>
+                    <div class="kpi-val" id="kpi-total-revenue" style="font-size: 1.35rem;">₹ 0</div>
+                    <div class="kpi-sub">Direct Transfers & Gateway</div>
+                </div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-icon-wrap green">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="kpi-info">
+                    <div class="kpi-label">Verified Payments</div>
+                    <div class="kpi-val" id="kpi-verified-payments">0 / 0</div>
+                    <div class="kpi-sub">Receipt & UTR Reconciled</div>
+                </div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-icon-wrap purple">
+                    <i class="fas fa-hotel"></i>
+                </div>
+                <div class="kpi-info">
+                    <div class="kpi-label">Accommodation Needed</div>
+                    <div class="kpi-val" id="kpi-accommodation-requests">0</div>
+                    <div class="kpi-sub">TU Guest House / Partner Hotels</div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- TOOLBAR & FILTERS -->
+        <section class="admin-toolbar">
+            
+            <div class="toolbar-top-row">
+                <!-- Search Box -->
+                <div class="search-box-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="table-search-input" placeholder="Search by Registrant Name, Email, Paper ID, Transaction ID, or Reg ID...">
+                </div>
+
+                <!-- Export & Refresh Buttons -->
+                <div class="toolbar-actions">
+                    <button type="button" class="btn-export-excel" id="btn-export-excel" title="Download Excel Spreadsheet (.xlsx)">
+                        <i class="fas fa-file-excel"></i>
+                        <span>Export to Excel (.xlsx)</span>
+                    </button>
+                    <button type="button" class="btn-export-csv" id="btn-export-csv" title="Download CSV File">
+                        <i class="fas fa-file-csv"></i>
+                        <span>Export CSV</span>
+                    </button>
+                    <button type="button" class="btn-refresh" id="btn-refresh-data" title="Reload Records">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Refresh</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Controls Row -->
+            <div class="toolbar-filter-row">
+                <div class="filter-group">
+                    <label><i class="fas fa-filter text-muted me-1"></i> Category:</label>
+                    <select id="filter-category">
+                        <option value="ALL">All Categories</option>
+                        <option value="Author (Indian)">Author (Indian)</option>
+                        <option value="Author (International)">Author (International)</option>
+                        <option value="Participant">Participant / Attendee</option>
+                        <option value="Industry">Industry Delegate</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label><i class="fas fa-shield-alt text-muted me-1"></i> Status:</label>
+                    <select id="filter-status">
+                        <option value="ALL">All Verification Statuses</option>
+                        <option value="Verified">Verified Only</option>
+                        <option value="Pending">Pending Verification</option>
+                        <option value="Flagged">Flagged</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label><i class="fas fa-bed text-muted me-1"></i> Accommodation:</label>
+                    <select id="filter-accommodation">
+                        <option value="ALL">All Participants</option>
+                        <option value="YES">Requested Accommodation</option>
+                        <option value="NO">Self Arranged</option>
+                    </select>
+                </div>
+
+                <div style="margin-left: auto; font-size: 0.82rem; font-weight: 700; color: var(--admin-muted);" id="table-records-count">
+                    Showing 0 entries
+                </div>
+            </div>
+
+        </section>
+
+        <!-- DATA GRID TABLE -->
+        <section class="table-card-container">
+            <div class="table-responsive-scroll">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Reg ID & Date</th>
+                            <th>Lead Registrant</th>
+                            <th>Category</th>
+                            <th>Fee</th>
+                            <th>Paper ID & Title</th>
+                            <th>Transaction & Status</th>
+                            <th>PDF Receipt</th>
+                            <th>Verification</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-table-body">
+                        <!-- Dynamically Injected by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =======================================================================
+         4. PARTICIPANT INSPECTION DOSSIER MODAL
+         ======================================================================= -->
+    <div class="admin-modal-overlay" id="admin-detail-modal">
+        <div class="admin-modal-card">
+            
+            <div class="admin-modal-header">
+                <div>
+                    <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--admin-gold); font-weight: 800; letter-spacing: 1px;">Registration Record</span>
+                    <h3 id="dossier-modal-reg-id">IS3A3-2026-REG-8492</h3>
+                </div>
+                <button type="button" class="btn-admin-logout" id="btn-close-dossier" style="padding: 6px 12px;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="admin-modal-body">
+                
+                <div class="dossier-grid">
+                    <div class="dossier-item">
+                        <div class="k">Lead Registrant Name</div>
+                        <div class="v" id="dossier-lead-name">Dr. Ananya Sharma</div>
+                    </div>
+                    <div class="dossier-item">
+                        <div class="k">Email Address</div>
+                        <div class="v" id="dossier-email">ananya@institution.edu</div>
+                    </div>
+                    <div class="dossier-item">
+                        <div class="k">Phone Number</div>
+                        <div class="v" id="dossier-phone">+91 9876543210</div>
+                    </div>
+                    <div class="dossier-item">
+                        <div class="k">Institution & Country</div>
+                        <div class="v" id="dossier-inst">IIT Guwahati (India)</div>
+                    </div>
+                    <div class="dossier-item">
+                        <div class="k">Registration Category</div>
+                        <div class="v" id="dossier-category">Author (Indian) - ₹ 6,000</div>
+                    </div>
+                    <div class="dossier-item">
+                        <div class="k">Paper ID</div>
+                        <div class="v" id="dossier-paper-id">IS3A3-2026-104</div>
+                    </div>
+                </div>
+
+                <div class="dossier-item mb-3">
+                    <div class="k">Paper Title / Manuscript</div>
+                    <div class="v" id="dossier-paper-title">Graph Neural Networks for Resilient Energy Distribution Grids</div>
+                </div>
+
+                <div class="dossier-item mb-3">
+                    <div class="k">All Authors & Co-Authors</div>
+                    <div class="v" id="dossier-authors">Dr. Ananya Sharma, Prof. D. Goswami, R. Kalita</div>
+                </div>
+
+                <div class="dossier-grid">
+                    <div class="dossier-item">
+                        <div class="k">Certificate Info & Role</div>
+                        <div class="v" id="dossier-cert">Dr. Ananya Sharma [Presenting Author]</div>
+                    </div>
+                    <div class="dossier-item">
+                        <div class="k">Accommodation Request</div>
+                        <div class="v" id="dossier-acc">Yes (TU Guest House)</div>
+                    </div>
+                    <div class="dossier-item">
+                        <div class="k">Transaction ID & Payment Status</div>
+                        <div class="v" id="dossier-txid">UTR39104829104 (Completed / Paid)</div>
+                    </div>
+                    <div class="dossier-item">
+                        <div class="k">Payment Timestamp</div>
+                        <div class="v" id="dossier-payment-time">2026-11-01 11:45</div>
+                    </div>
+                </div>
+
+                <div class="dossier-item mb-3">
+                    <div class="k">GSTIN / Institutional Billing Info</div>
+                    <div class="v" id="dossier-gst">IIT Guwahati - GSTIN: 18AAATI1234F1Z1</div>
+                </div>
+
+                <!-- Verification Status Controller -->
+                <div style="background: rgba(9, 43, 69, 0.04); padding: 18px; border-radius: 8px; border: 1.5px solid var(--admin-border); margin-top: 15px;">
+                    <label style="font-size: 0.85rem; font-weight: 800; color: var(--admin-navy); margin-bottom: 8px; display: block;">
+                        <i class="fas fa-user-check text-warning me-1"></i> Update Secretariat Verification Status
+                    </label>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                        <select id="dossier-status-select" style="padding: 10px 14px; border-radius: 6px; border: 1.5px solid var(--admin-border); font-weight: 700; font-size: 0.9rem; flex: 1;">
+                            <option value="Verified">Verified (Payment Reconciled)</option>
+                            <option value="Pending">Pending Review</option>
+                            <option value="Flagged">Flagged / Needs Resubmission</option>
+                        </select>
+                        <button type="button" class="btn btn-primary" id="btn-save-dossier-status" style="background: var(--admin-navy); border: 2px solid var(--admin-gold); padding: 10px 20px; font-weight: 700;">
+                            Save Status
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="admin-modal-footer">
+                <a href="#" target="_blank" class="btn-drive-pdf" id="dossier-drive-link" style="padding: 10px 18px; font-size: 0.88rem;">
+                    <i class="fas fa-file-pdf"></i> Open Google Drive PDF Receipt
+                </a>
+                <button type="button" class="btn btn-secondary" onclick="window.print();" style="padding: 10px 18px; font-weight: 700;">
+                    <i class="fas fa-print me-1"></i> Print Dossier
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SheetJS (XLSX) Library for 1-Click Client-Side Excel Export -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    
+    <!-- Admin Dashboard Logic -->
+    <script src="src/scripts/admin.js"></script>
+
+</body>
+
+</html>

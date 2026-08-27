@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IS³A³ 2026 | International Symposium on Smart Systems</title>
+
+    <link rel="icon" href="src/assets/logos/tulogo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="stylesheet" href="src/styles/navbar.css">
+    <link rel="stylesheet" href="src/styles/keynote.css">
+    <style>
+        /* Springer publishing-partner card in the right side of the hero banner */
+        .publisher-banner {
+            position: absolute;
+            top: 235px;
+            right: 6%;
+            width: 310px;
+            z-index: 20;
+        }
+
+        .publisher-box {
+            width: 100%;
+            padding: 22px 26px;
+            background: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 22px;
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+            text-align: center;
+        }
+
+        .publisher-title {
+            display: block;
+            margin-bottom: 14px;
+            color: #092b45;
+            font-size: 0.92rem;
+            font-weight: 800;
+            line-height: 1.35;
+            letter-spacing: 0.45px;
+            text-transform: uppercase;
+        }
+
+        .springer-logo {
+            display: block;
+            width: 205px;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 1200px) {
+            .publisher-banner {
+                top: 245px;
+                right: 3%;
+                width: 260px;
+            }
+
+            .springer-logo {
+                width: 175px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .publisher-banner {
+                position: static;
+                width: min(320px, 92%);
+                margin: 30px auto 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .publisher-box {
+                padding: 17px 20px;
+                border-radius: 18px;
+            }
+
+            .publisher-title {
+                font-size: 0.80rem;
+            }
+
+            .springer-logo {
+                width: 150px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-info-left">
+            <span><i class="fas fa-calendar-alt"></i> Nov 19–20, 2026</span>
+            <span class="d-none d-md-inline"><i class="fas fa-map-marker-alt"></i> Department of CSE, Tezpur
+                University</span>
+        </div>
+
+        <div class="top-info-right">
+            <a href="mailto:is3a3@tezu.ernet.in"><i class="fas fa-envelope"></i> is3a3@tezu.ernet.in</a>
+            <span>Tezpur, Assam, India</span>
+        </div>
+    </div>
+    <nav>
+        <a class="navbar-brand" href="index.html#home">
+            <img src="src/assets/logos/tulogo.png" alt="TU Logo" class="nav-logo-tu rounded shadow-sm">
+            <img src="src/assets/logos/LOGO2.png" alt="IS3A3 Icon" class="nav-logo-event rounded shadow-sm">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="callforpapers.html">Call For Papers</a></li>
+            <li><a href="doctoralcolloquium.html">Doctoral Colloquium</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle d-flex align-items-center gap-1">
+                    People <i class="fas fa-chevron-down nav-arrow"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="keynotespeakers.html">Keynote Speaker</a></li>
+                    <li><a href="advisors.html">Advisory Board</a></li>
+                    <li><a href="technical.html">Technical Committee</a></li>
+                </ul>
+            </li>
+            <li><a href="registration-form.html" class="btn-header" target="_blank">Register Now</a></li>
+            <li class="d-none d-lg-flex align-items-center"
+                style="margin-left: 10px; padding-right: 15px; border-right: 2px solid rgba(9, 43, 69, 0.1);">
+                <img src="src/assets/logos/meity logo.jpeg" alt="MeitY Logo" class="nav-logo-meity">
+            </li>
+        </ul>
+
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-video-bg"></div>
+
+        <div class="hero-content" style="position: relative; z-index: 1;">
+            <div class="hero-subtitle">Nov 19–20, 2026 | International Event</div>
+            <h1>International Symposium on Smart Systems,<br>Algorithms & Applications</h1>
+            <div class="lead mb-4 opacity-75 fw-medium pe-lg-5">
+                <p class="mb-2">
+                    <em>Advancing the global landscape of intelligent technologies through interdisciplinary research
+                        and algorithmic excellence.</em>
+                </p>
+                <p class="mb-2 fw-bold"
+                    style="font-size: 1.25rem; color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.9);">
+
+
+                    <a href="https://www.tezu.ernet.in/dcompsc/" class="fw-bold text-decoration-none"
+                        style="color: #ffea00; font-size: 1.25rem; text-shadow: 0 0 10px rgba(255,234,0,1);">
+
+                        Department of Computer Science and Engineering
+
+                    </a>,
+
+                    School of Engineering, Tezpur University.
+                </p>
+                <p class="small tracking-wide">Sonitpur, Assam-784028, India</p>
+            </div>
+
+            <div class="countdown-timer" id="countdown">
+                <div class="time-box">
+                    <span id="days" class="time-val">00</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours" class="time-val">00</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes" class="time-val">00</span>
+                    <span class="time-label">Minutes</span>
+                </div>
+                <div class="time-box">
+                    <span id="seconds" class="time-val">00</span>
+                    <span class="time-label">Seconds</span>
+                </div>
+            </div>
+
+            <div class="hero-btns">
+                <a href="#deadlines" class="btn btn-accent1">Important Dates</a>
+                <a href="#thrust-areas" class="btn btn-outline">Thrust Areas</a>
+            </div>
+        </div>
+
+
+
+        <!-- Publishing Partner for Proceedings -->
+        <div class="publisher-banner" aria-label="Publishing Partner for Proceedings">
+            <div class="publisher-box">
+                <span class="publisher-title">Publishing Partner for Proceedings</span>
+                <img src="src/assets/logos/springer.png" alt="Springer" class="springer-logo">
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-down" style="position: absolute; z-index: 1;">
+            <span>Discover More</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+
+    </section>
+
+    <section class="keynote-section" id="keynotes">
+
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5" data-aos="fade-up">
+
+                <span class="section-subtitle">
+                    Distinguished Talks
+                </span>
+                <h2 class="section-title">
+                    Keynote Speakers
+                </h2>
+
+                <p class="section-desc">
+                    IS³A³ 2026 will feature internationally renowned keynote speakers from academia, research
+                    laboratories, and industry.
+                </p>
+            </div>
+
+            <!-- ACM DSP -->
+            <div class="text-center mb-5 acm-dsp-wrapper" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- ACM Logo -->
+                <img src="src/assets/images/dsp-logo-tag.png" alt="ACM Logo" class="acm-dsp-logo">
+
+                <div>
+                    <span class="acm-dsp-badge">
+                        Sponsored By ACM Distinguished Speakers Program
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Speaker Cards -->
+            <div class="row g-4 justify-content-center align-items-stretch">
+
+                <!-- Speaker Card 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card keynote-card text-center h-100 p-4">
+
+                        <div class="speaker-img-wrapper">
+                            <img src="src/assets/images/adutta.png" alt="Dr. Ashutosh Dutta">
+                        </div>
+
+                        <div class="mt-4 d-flex flex-column justify-content-between flex-grow-1">
+                            <div class="speaker-title-box">
+                                <h3 class="speaker-name">
+                                    Dr. Ashutosh Dutta - IEEE Fellow
+                                </h3>
+                            </div>
+
+                            <div class="speaker-affil-box my-2">
+                                <p class="speaker-affil">
+                                    Chief 5G Strategist,<br>
+                                    The Johns Hopkins University, USA
+                                </p>
+                            </div>
+
+                            <div class="mt-3">
+                                <a href="/is3a3/2026/keynotespeakers.html" class="btn keynote-btn">
+                                    More
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Speaker Card 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="card keynote-card text-center h-100 p-4">
+
+                        <div class="speaker-img-wrapper">
+                            <img src="src/assets/images/rahman.jpg" alt="Dr. M Sohel Rahman">
+                        </div>
+
+                        <div class="mt-4 d-flex flex-column justify-content-between flex-grow-1">
+                            <div class="speaker-title-box">
+                                <h3 class="speaker-name">
+                                    Dr. M Sohel Rahman
+                                </h3>
+                            </div>
+
+                            <div class="speaker-affil-box my-2">
+                                <p class="speaker-affil">
+                                    Bangladesh University of Engineering and Technology (BUET)
+                                </p>
+                            </div>
+
+                            <div class="mt-3">
+                                <a href="/is3a3/2026/keynotespeakers.html" class="btn keynote-btn">
+                                    More
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Speaker Card 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+                    <div class="card keynote-card text-center h-100 p-4">
+
+                        <div class="speaker-img-wrapper">
+                            <img src="src/assets/images/flammini.jpg" alt="Dr. Francesco Flammini">
+                        </div>
+
+                        <div class="mt-4 d-flex flex-column justify-content-between flex-grow-1">
+                            <div class="speaker-title-box">
+                                <h3 class="speaker-name">
+                                    Dr. Francesco Flammini
+                                </h3>
+                            </div>
+
+                            <div class="speaker-affil-box my-2">
+                                <p class="speaker-affil">
+                                    Mälardalen University, Sweden
+                                </p>
+                            </div>
+
+                            <div class="mt-3">
+                                <a href="/is3a3/2026/keynotespeakers.html" class="btn keynote-btn">
+                                    More
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <section class="section" id="strategic-vision">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span>Symposium Framework</span>
+                <h2>Strategic Vision & Core Aims</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="vision-split-grid">
+                <div class="vision-statement-card" data-aos="fade-right">
+                    <div class="vision-quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Empowering Tomorrow's Intelligent Ecosystems</h3>
+                    <p>
+                        The International Symposium on Smart Systems, Algorithms and Applications (IS³A³ 2026) aims to
+                        provide a premier global platform for researchers, academicians, industry professionals, and
+                        students to present and discuss recent advances in Smart Systems, Artificial Intelligence,
+                        Network & Cyber Security, Algorithms, and Emerging Applications.
+                    </p>
+                    <div class="vision-card-footer">
+                        <span class="conference-tag">IS³A³ 2026</span>
+                        <span class="conference-tag-alt"><i class="fas fa-shield-alt text-accent"></i> Secure &
+                            Intelligent</span>
+                    </div>
+                </div>
+
+                <div class="vision-objectives-timeline" data-aos="fade-left" data-aos-stagger>
+
+                    <div class="timeline-objective-item">
+                        <div class="objective-marker">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="objective-content">
+                            <h4>Knowledge Dissemination</h4>
+                            <p>Promote dissemination of quality research and emerging technological trends to advance
+                                the global landscape of technical engineering literature.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-objective-item">
+                        <div class="objective-marker">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="objective-content">
+                            <h4>Industrial & Academic Synapses</h4>
+                            <p>Encourage strong collaboration and knowledge-sharing infrastructures between academia,
+                                cutting-edge industries, and global research organizations.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-objective-item">
+                        <div class="objective-marker">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="objective-content">
+                            <h4>Intelligent Exchange Pipelines</h4>
+                            <p>Facilitate the robust exchange of foundational and novel ideas targeting the optimization
+                                of secure, intelligent, and scalable computing systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-objective-item">
+                        <div class="objective-marker">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="objective-content">
+                            <h4>Scholarly Interactivity</h4>
+                            <p>Provide premium opportunities for continuous mentorship and professional interaction
+                                among veteran researchers, active professionals, and young scholars.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-objective-item">
+                        <div class="objective-marker">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="objective-content">
+                            <h4>Cross-Boundary Engineering</h4>
+                            <p>Support interdisciplinary research initiatives specifically engineered to address
+                                complex, real-world structural challenges and societal applications.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-off-white" id="cfp">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span>Call for Papers</span>
+                <h2>Research Thrust Tracks</h2>
+                <div class="line"></div>
+                <p>Quality research papers are invited from researchers, academicians, industry professionals, and
+                    scholars for the prime tracks of **IS³A³ 2026**.</p>
+            </div>
+
+            <div class="cfp-grid-4-tracks" data-aos-stagger>
+
+                <div class="cfp-mega-card">
+                    <div class="cfp-card-header-wrap">
+                        <div class="cfp-track-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="cfp-track-meta">
+                            <span class="track-number">Track 01</span>
+                            <h3>Smart Systems & AI</h3>
+                        </div>
+                    </div>
+                    <ul class="track-topics-list">
+                        <li><i class="fas fa-circle-nodes"></i> Artificial Intelligence and Machine Learning</li>
+                        <li><i class="fas fa-circle-nodes"></i> Deep Learning and Generative AI</li>
+                        <li><i class="fas fa-circle-nodes"></i> Computer Vision and Pattern Recognition</li>
+                        <li><i class="fas fa-circle-nodes"></i> Natural Language Processing</li>
+                        <li><i class="fas fa-circle-nodes"></i> Explainable and Trustworthy AI</li>
+                        <li><i class="fas fa-circle-nodes"></i> Data Science and Analytics</li>
+                        <li><i class="fas fa-circle-nodes"></i> Intelligent IoT and Edge Computing</li>
+                        <li><i class="fas fa-circle-nodes"></i> Smart Healthcare Systems</li>
+                        <li><i class="fas fa-circle-nodes"></i> Human–Computer Interaction</li>
+                        <li><i class="fas fa-circle-nodes"></i> Intelligent Decision Support Systems</li>
+                    </ul>
+                </div>
+
+                <div class="cfp-mega-card">
+                    <div class="cfp-card-header-wrap">
+                        <div class="cfp-track-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="cfp-track-meta">
+                            <span class="track-number">Track 02</span>
+                            <h3>Networks & Cyber Security</h3>
+                        </div>
+                    </div>
+                    <ul class="track-topics-list">
+                        <li><i class="fas fa-lock"></i> Network Security and Secure Communication</li>
+                        <li><i class="fas fa-lock"></i> Obfuscated Malware Detection</li>
+                        <li><i class="fas fa-lock"></i> Cybersecurity and Threat Intelligence</li>
+                        <li><i class="fas fa-lock"></i> Intrusion Detection and Prevention Systems</li>
+                        <li><i class="fas fa-lock"></i> Blockchain and Distributed Security</li>
+                        <li><i class="fas fa-lock"></i> Privacy and Trust Management</li>
+                        <li><i class="fas fa-lock"></i> Cryptography and Authentication</li>
+                        <li><i class="fas fa-lock"></i> AI for Cybersecurity</li>
+                        <li><i class="fas fa-lock"></i> Cloud and Edge Security</li>
+                        <li><i class="fas fa-lock"></i> IoT Security</li>
+                        <li><i class="fas fa-lock"></i> Wireless and Mobile Security</li>
+                        <li><i class="fas fa-lock"></i> Digital Forensics</li>
+                        <li><i class="fas fa-lock"></i> Secure Distributed Systems</li>
+                        <li><i class="fas fa-lock"></i> Secure Computing Systems</li>
+                        <li><i class="fas fa-lock"></i> Cyber Threat Analysis</li>
+                        <li><i class="fas fa-lock"></i> Adversarial Machine Learning</li>
+                    </ul>
+                </div>
+
+                <div class="cfp-mega-card">
+                    <div class="cfp-card-header-wrap">
+                        <div class="cfp-track-icon">
+                            <i class="fas fa-square-root-variable"></i>
+                        </div>
+                        <div class="cfp-track-meta">
+                            <span class="track-number">Track 03</span>
+                            <h3>Algorithms and Emerging Applications</h3>
+                        </div>
+                    </div>
+
+                    <ul class="track-topics-list">
+                        <li><i class="fas fa-calculator"></i> Graph and Network Algorithms</li>
+                        <li><i class="fas fa-calculator"></i> Evolutionary Computing</li>
+                        <li><i class="fas fa-calculator"></i> Metaheuristic Optimization</li>
+                        <li><i class="fas fa-calculator"></i> Swarm Intelligence</li>
+                        <li><i class="fas fa-calculator"></i> Computational Intelligence</li>
+                        <li><i class="fas fa-calculator"></i> Optimization Techniques</li>
+                        <li><i class="fas fa-calculator"></i> Big Data Algorithms</li>
+                        <li><i class="fas fa-calculator"></i> Parallel and Distributed Algorithms</li>
+                        <li><i class="fas fa-calculator"></i> Data Mining and Knowledge Discovery</li>
+                        <li><i class="fas fa-calculator"></i> Mathematical and Approximation Algorithms</li>
+
+                        <li><i class="fas fa-rocket"></i> Bioinformatics and Computational Biology</li>
+                        <li><i class="fas fa-rocket"></i> Smart Agriculture</li>
+                        <li><i class="fas fa-rocket"></i> Healthcare Informatics</li>
+                        <li><i class="fas fa-rocket"></i> Intelligent Transportation Systems</li>
+                        <li><i class="fas fa-rocket"></i> Industrial Automation</li>
+                        <li><i class="fas fa-rocket"></i> FinTech Applications</li>
+                        <li><i class="fas fa-rocket"></i> Sustainable Computing</li>
+                        <li><i class="fas fa-rocket"></i> Smart Cities</li>
+                        <li><i class="fas fa-rocket"></i> Cyber-Physical Systems</li>
+                        <li><i class="fas fa-rocket"></i> Emerging Interdisciplinary Applications</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="cfp-guidelines-wrapper" data-aos="zoom-in">
+                <div class="cfp-notice-card">
+                    <h3
+                        style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: var(--primary); margin-bottom: 15px; text-transform: uppercase; font-size: 1.4rem;">
+                        Submission Guidelines &amp; Notes</h3>
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <ul class="cfp-notice-list">
+                                <li class="fw-bold text-primary"><i class="fas fa-exclamation-triangle text-accent"></i>
+                                    Submissions are expected to present original, unpublished research contributions and
+                                    should not be under consideration elsewhere.</li>
+                                <li><i class="fas fa-check-circle"></i> Manuscripts must strictly conform to the
+                                    Springer LNCS template formatting specifications.</li>
+                                <li><i class="fas fa-check-circle"></i> Regular research tracks are restricted to a
+                                    maximum sequence length allocation of 8 and 4 pages.</li>
+                                <li><i class="fas fa-check-circle"></i> All submission pipeline phases are managed
+                                    transparently via the Springer Nature Meteor Submission System.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <div class="d-flex flex-wrap justify-content-lg-end justify-content-center gap-3">
+                                <a href="#" class="btn btn-accent text-center btn-submission-guide">
+                                    <i class="fas fa-book-open me-2"></i>View Submission Guide
+                                </a>
+                                <a href="https://meteor.springer.com/IS3A32026" target="_blank"
+                                    class="btn btn-accent text-center btn-submit-paper">
+                                    <i class="fas fa-paper-plane me-2"></i>Submit Your Paper
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+
+                <div class="about-text" data-aos="fade-right">
+                    <div class="section-header" style="text-align: left; margin-bottom: 25px;">
+                        <span
+                            style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Institution
+                            Spotlight</span>
+                        <h2
+                            style="font-size: 2.8rem; font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--primary); text-transform: uppercase; line-height: 1.2; margin-top: 8px;">
+                            Tezpur University <br>
+                            <span
+                                style="font-size: 1.3rem; color: var(--text-muted); font-weight: 500; font-family: 'Inter', sans-serif; text-transform: none; letter-spacing: 0;">(A
+                                Central University)</span>
+                        </h2>
+                        <div class="line" style="margin: 20px 0; width: 80px; height: 4px; background: var(--accent);">
+                        </div>
+                    </div>
+
+                    <p
+                        style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.7; text-align: justify;">
+                        Established by an Act of Parliament in 1994, <strong>Tezpur University</strong> stands as a
+                        premier seat of learning in the Northeast. It provides a unique environment for innovative
+                        research and academic excellence.
+                    </p>
+                    <p
+                        style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 40px; line-height: 1.7; text-align: justify;">
+                        Our mission is to offer employment-oriented and interdisciplinary courses to meet regional
+                        aspirations and the development needs of Assam. We aim to promote research in areas of special
+                        and direct relevance to the region and in emerging areas of science and technology.
+                    </p>
+
+                    <div class="about-features-inline" data-aos="fade-up">
+                        <div class="about-card-small">
+                            <i class="fas fa-calendar-check"></i>
+                            <h4>Est. 1994</h4>
+                        </div>
+                        <div class="about-card-small">
+                            <i class="fas fa-university"></i>
+                            <h4>Central Univ.</h4>
+                        </div>
+                        <div class="about-card-small">
+                            <i class="fas fa-star"></i>
+                            <h4>NAAC A+</h4>
+                        </div>
+                        <div class="about-card-small">
+                            <i class="fas fa-globe"></i>
+                            <h4>Global Ranking</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image-wrapper" data-aos="fade-left">
+                    <div class="tu-image-box">
+                        <img src="src/assets/images/main_gate.jpg" alt="Tezpur University Campus">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="youtube-section" class="section bg-off-white">
+        <div class="container">
+            <div class="about-grid">
+
+                <div class="about-text" data-aos="fade-right">
+                    <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                        <span class="text-accent fw-bold text-uppercase small tracking-widest">Watch & Explore</span>
+                        <h2 class="display-6 fw-bold text-brand-navy mt-2">Discover Tezpur University</h2>
+                        <div class="line" style="margin: 20px 0;"></div>
+                    </div>
+                    <p class="text-muted mb-4">
+                        Take a virtual tour of our beautiful campus and explore the vibrant academic environment at
+                        Tezpur University. Watch our official video to learn more about our facilities, research
+                        centers, and student life.
+                    </p>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="http://www.tezu.ernet.in/" target="_blank" class="btn btn-accent">OFFICIAL WEBSITE</a>
+                    </div>
+                </div>
+
+                <div class="video-link-container" data-aos="fade-left">
+                    <a href="https://www.youtube.com/watch?v=TC8FoT5gq3A" target="_blank"
+                        class="youtube-thumbnail d-block shadow-sm"
+                        style="position: relative; border-radius: 12px; overflow: hidden;">
+                        <img src="src/assets/images/main_gate.jpg" alt="Tezpur University Campus" class="w-100"
+                            style="height: 380px; object-fit: cover;">
+                        <div class="youtube-play-btn"
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                            <i class="fas fa-play"
+                                style="color: white; font-size: 3rem; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3));"></i>
+                        </div>
+                        <div class="position-absolute bottom-0 start-0 end-0 p-3"
+                            style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                            <p class="text-white mb-0 fw-bold small"><i class="fab fa-youtube me-2"></i>Watch Campus
+                                Tour Video</p>
+                        </div>
+                    </a>
+                    <p class="text-center text-muted small mt-3">
+                        <i class="fas fa-play-circle text-danger me-1"></i> Click to watch our official campus video
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-off-white" id="secretariat">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span>Organizing Secretariat</span>
+                <h2>Academic & Research Partner</h2>
+                <div class="line"></div>
+                <p>Driving innovation through advanced computing, algorithmic breakthroughs, and technical leadership at
+                    Tezpur University.</p>
+            </div>
+
+            <div class="cse-spotlight-card" data-aos="zoom-in">
+                <div class="row g-0 align-items-stretch">
+
+                    <div class="col-lg-4 cse-brand-sidebar">
+                        <div class="cse-sidebar-content">
+                            <div class="cse-spotlight-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3 class="cse-main-title">CSE</h3>
+                            <span class="cse-badge">Est. 1994</span>
+
+                            <div class="cse-programs-tag-cloud">
+                                <span>B.Tech</span>
+                                <span>M.Tech</span>
+                                <span>MCA</span>
+                                <span>Ph.D</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 cse-main-body">
+                        <span class="cse-subtext-heading">Department of Computer Science & Engineering</span>
+                        <p class="cse-paragraph-lead">
+                            Established in July 1994, the department promotes specialized knowledge in emerging areas of
+                            computing. It channels talented youth into a knowledge-intensive field by offering advanced
+                            programs designed to meet the requirements of the global technology arena.
+                        </p>
+
+                        <div class="cse-milestones-box">
+                            <h4><i class="fas fa-bullseye text-accent"></i> Vision & Milestones</h4>
+                            <ul class="cse-checked-list">
+                                <li>
+                                    <div class="list-check-icon"><i class="fas fa-check"></i></div>
+                                    <span>Competent professional learning center for industrial and academic
+                                        leadership.</span>
+                                </li>
+                                <li>
+                                    <div class="list-check-icon"><i class="fas fa-check"></i></div>
+                                    <span>Frontier centers of algorithmic research excellence.</span>
+                                </li>
+                                <li>
+                                    <div class="list-check-icon"><i class="fas fa-check"></i></div>
+                                    <span>Offering comprehensive B.Tech, M.Tech (CSE & Data Sciences), MCA, and Ph.D.
+                                        advanced pathways.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="section" id="registration">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span>Secure Your Spot</span>
+                <h2>Registration</h2>
+                <div class="line"></div>
+                <p>Join us for two days of groundbreaking research and professional networking. Registrations are now
+                    open for all attendees.</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; background: white; padding: 60px 40px; border-radius: 8px; border: 1px solid rgba(9, 43, 69, 0.1); box-shadow: var(--shadow); border-bottom: 5px solid var(--accent);"
+                data-aos="zoom-in">
+                <i class="fas fa-id-card-alt" style="font-size: 4rem; color: var(--accent); margin-bottom: 30px;"></i>
+                <h3
+                    style="font-family: 'Montserrat'; font-size: 2rem; color: var(--primary); margin-bottom: 20px; text-transform: uppercase; font-weight: 900;">
+                    Register Online</h3>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 40px; line-height: 1.8;">
+                    To register for the IS³A³ 2026 Symposium, please complete the online registration form. After
+                    submission, you will receive a confirmation email with further instructions regarding the event.
+                </p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="registration-form.html" target="_blank" class="btn btn-accent"
+                        style="padding: 18px 45px; font-size: 1rem;">Go to Registration Form</a>
+                    <a href="register.html" target="_blank" class="btn btn-outline"
+                        style="color: var(--primary); border-color: var(--primary); padding: 18px 45px; font-size: 1rem;">View
+                        Fee Structure</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="deadlines" id="deadlines">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="sub-heading">Critical Milestones</span>
+                <h2 class="main-heading">Important Dates</h2>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="about-grid deadlines-grid">
+                <div class="date-container" data-aos="fade-right">
+                    <div class="date-row">
+                        <span class="date-title">Submission Deadline</span>
+                        <span class="date-value">August 31, 2026</span>
+                    </div>
+                    <div class="date-row">
+                        <span class="date-title">Acceptance Notification</span>
+                        <span class="date-value">September 30, 2026</span>
+                    </div>
+                    <div class="date-row">
+                        <span class="date-title">Camera Ready Due</span>
+                        <span class="date-value">October 5, 2026</span>
+                    </div>
+                    <div class="date-row">
+                        <span class="date-title">Conference Days</span>
+                        <span class="date-value">November 19-20, 2026</span>
+                    </div>
+                </div>
+
+                <div class="main-event-box" data-aos="fade-left">
+                    <i class="fas fa-calendar-check event-icon"></i>
+                    <h3 class="event-box-title">Conference Dates</h3>
+                    <div class="event-date-display">
+                        Nov 19–20 <br>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <p class="event-location">
+                        <i class="fas fa-map-marker-alt me-2"></i> Tezpur University, India
+                    </p>
+                    <a href="registration-form.html" class="btn btn-outline btn-full">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-white" id="calendar">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span>Program Overview</span>
+                <h2>Event Schedule</h2>
+                <div class="line"></div>
+                <p>The detailed itinerary for keynotes, technical tracks, and workshops is currently being finalized.
+                </p>
+            </div>
+
+            <div class="schedule-tba-card" data-aos="zoom-in">
+                <div class="tba-icon">
+                    <i class="fas fa-hourglass-half"></i>
+                </div>
+                <h3>Schedule To Be Announced</h3>
+                <p>
+                    Please check back later for the complete day-by-day symposium program. <br>
+                    Registered participants will be notified via email once the full schedule is published.
+                </p>
+                <div class="tba-dates">
+                    <span class="tba-badge"><i class="fas fa-calendar-day text-accent me-2"></i>Day 1: Nov 19,
+                        2026</span>
+                    <span class="tba-badge"><i class="fas fa-calendar-alt text-accent me-2"></i>Day 2: Nov 20,
+                        2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-off-white" id="explore-region">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span>Explore the Region</span>
+                <h2>Places to Visit in Tezpur</h2>
+                <div class="line"></div>
+                <p>Discover the scenic beauty and rich heritage of Tezpur (The Cultural Capital of Assam and The City of
+                    Eternal Romance) and its surroundings.</p>
+            </div>
+
+            <div class="region-grid" data-aos-stagger>
+
+                <div class="card region-card">
+                    <div class="region-card-img-wrap">
+                        <img src="src/assets/images/agnigarh.jpeg" alt="Agnigarh Hill">
+                        <span class="region-badge"><i class="fas fa-car"></i> ~11 km</span>
+                    </div>
+                    <div class="region-card-body">
+                        <h3>Agnigarh Hill</h3>
+                        <p>A mythological hillock associated with Princess Usha and Prince Aniruddha. Offers panoramic
+                            views of the Brahmaputra.</p>
+                    </div>
+                </div>
+
+                <div class="card region-card">
+                    <div class="region-card-img-wrap">
+                        <img src="src/assets/images/mahabhairab.jpg" alt="Mahabhairab Temple">
+                        <span class="region-badge"><i class="fas fa-car"></i> ~11 km</span>
+                    </div>
+                    <div class="region-card-body">
+                        <h3>Mahabhairab Temple</h3>
+                        <p>One of the oldest Shiva temples in Assam, dedicated to Lord Shiva in his fierce Bhairava
+                            form. It was patronized by Ahom rulers.</p>
+                    </div>
+                </div>
+
+                <div class="card region-card">
+                    <div class="region-card-img-wrap">
+                        <img src="src/assets/images/daparbatia.jpeg" alt="Da Parbatia">
+                        <span class="region-badge"><i class="fas fa-car"></i> ~15 km</span>
+                    </div>
+                    <div class="region-card-body">
+                        <h3>Da Parbatia</h3>
+                        <p>Ancient archaeological site with a beautifully carved stone doorframe from the 5th-6th
+                            century Gupta period.</p>
+                    </div>
+                </div>
+
+                <div class="card region-card">
+                    <div class="region-card-img-wrap">
+                        <img src="src/assets/images/chitralekha.jpg" alt="Chitralekha Udyan">
+                        <span class="region-badge"><i class="fas fa-car"></i> ~12 km</span>
+                    </div>
+                    <div class="region-card-body">
+                        <h3>Chitralekha Udyan (Cole Park)</h3>
+                        <p>A scenic park adorned with historic stone sculptures, pathways, and dynamic water features
+                            ideal for evening relaxation.</p>
+                    </div>
+                </div>
+
+                <div class="card region-card">
+                    <div class="region-card-img-wrap">
+                        <img src="src/assets/images/bamuni.jpg" alt="Bamuni Hills">
+                        <span class="region-badge"><i class="fas fa-car"></i> ~11 km</span>
+                    </div>
+                    <div class="region-card-body">
+                        <h3>Bamuni Hills</h3>
+                        <p>Famous for artistic sculptural ruins from the 9th-10th century, displaying exceptional
+                            historical stone carvings.</p>
+                    </div>
+                </div>
+
+                <div class="card region-card">
+                    <div class="region-card-img-wrap">
+                        <img src="src/assets/images/kaziranga.jpg" alt="Kaziranga National Park">
+                        <span class="region-badge"><i class="fas fa-car"></i> ~33 km</span>
+                    </div>
+                    <div class="region-card-body">
+                        <h3>Kaziranga National Park</h3>
+                        <p>A world heritage site widely celebrated as the natural home to the world's largest population
+                            of great Indian one-horned rhinoceros.</p>
+                    </div>
+                </div>
+
+                <div class="card region-card">
+                    <div class="region-card-img-wrap">
+                        <img src="src/assets/images/airport.jpg" alt="Tezpur Airport (Salonibari)">
+                        <span class="region-badge"><i class="fas fa-car"></i> ~13 km</span>
+                    </div>
+                    <div class="region-card-body">
+                        <h3>Tezpur Airport (Salonibari)</h3>
+                        <p>Domestic airport with connectivity to major cities. Located at Salonibari, serving Tezpur and
+                            surrounding areas.</p>
+                    </div>
+                </div>
+
+                <div class="card region-card">
+                    <div class="region-card-img-wrap">
+                        <img src="src/assets/images/railway.jpg" alt="Dekargaon Railway Station">
+                        <span class="region-badge"><i class="fas fa-car"></i> ~12 km</span>
+                    </div>
+                    <div class="region-card-body">
+                        <h3>Dekargaon Railway Station</h3>
+                        <p>Nearest railway station to Tezpur University, well-connected to Guwahati and other major
+                            cities of India.</p>
+                    </div>
+                </div>
+
+                <div class="card region-card">
+                    <div class="region-card-img-wrap">
+                        <img src="src/assets/images/nameri.webp" alt="Nameri National Park">
+                        <span class="region-badge"><i class="fas fa-car"></i> ~32 km</span>
+                    </div>
+                    <div class="region-card-body">
+                        <h3>Nameri National Park</h3>
+                        <p>Biodiversity hotspot along the Jia Bhoroli River, perfect for river rafting and bird
+                            watching.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="text-center mt-5" data-aos="fade-up">
+            <p class="text-muted"><i class="fas fa-info-circle me-2"></i>Distances are approximate from Tezpur
+                University campus</p>
+        </div>
+        <div class="row mt-5" data-aos="zoom-in">
+            <div class="col-12 text-center">
+                <div class="p-4 bg-white rounded-4 shadow-sm border">
+                    <h6 class="fw-bold text-brand-navy mb-3">
+                        <i class="fas fa-external-link-alt me-2 text-brand-accent"></i>
+                        Explore The Seven Sisters of India
+                    </h6>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="https://assamtourism.gov.in" target="_blank"
+                            class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 fw-bold tourism-btn">
+                            <i class="fas fa-map-marked-alt me-2"></i>Assam Tourism
+                        </a>
+                        <a href="https://www.meghalayatourism.in/" target="_blank"
+                            class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 fw-bold tourism-btn">
+                            <i class="fas fa-cloud me-2"></i>Meghalaya Tourism
+                        </a>
+                        <a href="https://tourism.nagaland.gov.in" target="_blank"
+                            class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 fw-bold tourism-btn">
+                            <i class="fas fa-mountain me-2"></i>Nagaland Tourism
+                        </a>
+                        <a href="https://mizoramtourism.com" target="_blank"
+                            class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 fw-bold tourism-btn">
+                            <i class="fas fa-mountain me-2"></i>Mizoram Tourism
+                        </a>
+                        <a href="https://tripuratourism.gov.in" target="_blank"
+                            class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 fw-bold tourism-btn">
+                            <i class="fas fa-mountain me-2"></i>Tripura Tourism
+                        </a>
+                        <a href="https://manipurtourism.gov.in" target="_blank"
+                            class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 fw-bold tourism-btn">
+                            <i class="fas fa-mountain me-2"></i>Manipur Tourism
+                        </a>
+                        <a href="https://arunachaltourism.com" target="_blank"
+                            class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 fw-bold tourism-btn">
+                            <i class="fas fa-mountain me-2"></i>Arunachal Pradesh Tourism
+                        </a>
+                    </div>
+                    <p class="small text-muted mt-3 mb-0">Visit the official websites for more details on regional
+                        travel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="venue-section" id="venue">
+        <div class="container" data-aos="zoom-in">
+            <div class="venue-unified-card">
+
+                <div class="venue-content">
+                    <div class="section-header">
+                        <span class="sub-heading">Location</span>
+                        <h2 class="main-heading">Conference Venue</h2>
+                        <div class="accent-line"></div>
+                    </div>
+                    <p class="venue-text">
+                        The 2026 IS³A³ symposium will be hosted at the Department of Computer Science and Engineering,
+                        Tezpur University a hub of academic excellence nestled in a serene landscape, providing the
+                        perfect environment for intellectual exchange.
+                    </p>
+                    <div class="venue-btns">
+                        <a href="https://maps.app.goo.gl/YourActualLinkHere" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-external-link-alt"></i> View on Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="venue-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.814290088874!2d92.8286333!3d26.6264428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744eb8842416801%3A0x868d407ff566b696!2sDepartment%20of%20Computer%20Science%20%26%20Engineering%2C%20Tezpur%20University!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-off-white" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span>Common Questions</span>
+                <h2>Frequently Asked Questions</h2>
+                <div class="line"></div>
+            </div>
+            <div class="faq-container" data-aos="fade-up">
+                <div class="faq-item">
+                    <div class="faq-question">Are there presentation awards? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Yes, we have "Best Paper" and "Best Student Presentation" awards which
+                        include a certificate and a cash prize.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Will the proceedings be indexed? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Accepted and presented papers will be submitted for inclusion in IEEE Xplore
+                        and major indexing databases (Scopus, WoS).</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is accommodation provided? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">While we don't provide free accommodation, we have tie-ups with nearby
+                        hotels and the University Guest House for discounted rates.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I attend without presenting? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Absolutely! You can register as a "Non-presenting Delegate" to attend all
+                        sessions and network with experts.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+
+            <div class="section-header text-center" data-aos="fade-up" style="margin-bottom: 50px;">
+                <span
+                    style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Get
+                    in Touch</span>
+                <h2
+                    style="font-family: 'Montserrat', sans-serif; font-size: 3rem; color: var(--white); text-transform: uppercase; font-weight: 900; margin-top: 10px;">
+                    Contact Us</h2>
+                <div class="line" style="width: 80px; height: 4px; background: var(--accent); margin: 20px auto;"></div>
+                <p style="color: #9CA3AF; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Have questions regarding
+                    the symposium, paper submissions, or registration? Drop us a message.</p>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-details" data-aos="fade-right">
+                    <h3 class="contact-title">Conference Secretariat</h3>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Department of Computer Science & Engineering,<br>Tezpur University, Napaam,<br>Tezpur,
+                                Assam 784028, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <h4>Email Queries</h4>
+                            <p><a href="mailto:is3a3@tezu.ernet.in">is3a3@tezu.ernet.in</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Phone Helpdesk</h4>
+                            <p>+91 03712-275100</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="Vaild Eamail Address" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Paper Submission Query" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-accent2 w-100"
+                            style="color: var(--primary); font-size: 1rem; margin-top: 10px; padding: 16px 0; border-radius: 8px;">
+                            <i class="fas fa-paper-plane me-2" style="margin-bottom: 0;"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid" data-aos="fade-up">
+                <div class="footer-col footer-about">
+                    <img src="src/assets/logos/LOGO2.png" alt="IS³A³ 2026 Logo"
+                        style="height: 130px; width: auto; background: white; padding: 10px; border-radius: 4px; margin-bottom: 20px;">
+                    <p>The leading international symposium dedicated to the advancement of smart systems and algorithmic
+                        research.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a
+                            href="https://www.linkedin.com/in/department-of-computer-science-and-engineering-tezpur-university-3316ab21a "><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Symposium</a></li>
+                        <li><a href="keynotespeakers.html">Keynote Speakers</a></li>
+                        <li><a href="#deadlines">Important Dates</a></li>
+                    </ul>
+
+                    <h4 style="margin-top: 25px;">Contact Us</h4>
+                    <ul>
+                        <li><a href="mailto:is3a3@tezu.ernet.in"><i class="fas fa-envelope"
+                                    style="margin-right: 10px; color: var(--accent);"></i> is3a3@tezu.ernet.in</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"
+                                    style="margin-right: 10px; color: var(--accent);"></i> Tezpur, Assam, India</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="callforpapers.html">Call for Papers</a></li>
+                        <li><a href="callforpapers.html">Submission Portal</a></li>
+                        <li><a href="registration-form.html">Registration Form</a></li>
+                        <li><a href="admin.html" target="_blank"><i class="fas fa-user-shield me-1"></i> Secretariat Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Academic Partner</h4>
+                    <a href="https://conferencealerts.co.in/" target="_blank">
+                        <img src="src/assets/logos/conferencealerts.jpg" alt="Academic Partner Logo"
+                            style="max-width: 220px; width: 100%; height: auto; background: white; padding: 8px; border-radius: 8px; margin-top: 10px; display: inline-block; transition: var(--transition);">
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+
+            <p class="copyright" data-aos="fade-up">© 2026 IS³A³ Symposium. All Rights Reserved. | Designed & Developed
+                by Tushar Bharali & Swarup Roy</p>
+        </div>
+    </footer>
+
+    <a href="#home"
+        style="position: fixed; bottom: 30px; right: 30px; background: var(--primary); border: 2px solid var(--accent); color: var(--accent); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: var(--shadow); z-index: 999; transition: var(--transition);">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="src/scripts/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Hero Content Entrance Chain (Fades in incrementally upon DOM lifecycle initialization)
+            const heroElements = document.querySelectorAll('.hero-content > *');
+            heroElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)';
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 120 * (index + 1));
+            });
+
+            // 2. Initializing Asynchronous Native Scroll Reveal Engine (Intersection Observer API)
+            const aosElements = document.querySelectorAll('[data-aos]');
+            const observerConfiguration = {
+                root: null,
+                rootMargin: '0px 0px -80px 0px', // Triggers slightly before crossing into view boundary
+                threshold: 0.12
+            };
+
+            const scrollRevealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target); // Execution completes once to maximize lifecycle rendering budget
+                    }
+                });
+            }, observerConfiguration);
+
+            aosElements.forEach(element => {
+                scrollRevealObserver.observe(element);
+            });
+
+            // 3. Dynamic Wave Loading Script for grid subelements (Automatically hooks grid lists)
+            const staggeredLayouts = document.querySelectorAll('[data-aos-stagger]');
+            staggeredLayouts.forEach(layoutGrid => {
+                const subElements = layoutGrid.children;
+                Array.from(subElements).forEach((childNode, stepIndex) => {
+                    childNode.setAttribute('data-aos', 'fade-up');
+                    childNode.style.transitionDelay = `${stepIndex * 0.12}s`; // Staggers sequentially (0s, 0.12s, 0.24s...)
+                    scrollRevealObserver.observe(childNode);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

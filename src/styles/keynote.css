@@ -1,0 +1,411 @@
+.speakers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 40vh;
+    padding: 40px 20px;
+}
+
+.coming-soon-card {
+    background: var(--white);
+    border: 2px dashed rgba(229, 180, 34, 0.4);
+    border-radius: 16px;
+    padding: 60px 40px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.coming-soon-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(9, 43, 69, 0.1);
+}
+
+.coming-soon-icon {
+    font-size: 4rem;
+    color: var(--accent);
+    margin-bottom: 25px;
+    animation: pulse 2s infinite;
+}
+
+.coming-soon-card h3 {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.coming-soon-card p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.update-badge {
+    display: inline-block;
+    background: rgba(9, 43, 69, 0.05);
+    color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(9, 43, 69, 0.1);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
+/* --- KEYNOTE / DISTINGUISHED TALKS SECTION STYLES --- */
+.keynote-section {
+    position: relative;
+    background: linear-gradient(135deg, #071927 0%, #092B45 40%, #0d2137 70%, #06121e 100%) !important;
+    padding: 100px 0 !important;
+    overflow: hidden;
+}
+
+.keynote-section::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(229, 180, 34, 0.12) 0%, rgba(9, 43, 69, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.keynote-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Section Header */
+.keynote-section .section-subtitle {
+    color: #E5B422;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.88rem;
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(229, 180, 34, 0.12);
+    border: 1px solid rgba(229, 180, 34, 0.35);
+    border-radius: 30px;
+    margin-bottom: 14px;
+    backdrop-filter: blur(4px);
+}
+
+.keynote-section .section-title {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: clamp(2.1rem, 4vw, 2.8rem);
+    margin-top: 6px;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.keynote-section .section-desc {
+    color: #e5e7eb;
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* ACM DSP Sponsor Tag */
+.acm-dsp-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.acm-dsp-logo {
+    height: 120px;
+    background: #ffffff;
+    padding: 16px 28px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.acm-dsp-logo:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 20px rgba(229, 180, 34, 0.3);
+}
+
+.acm-dsp-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #E5B422 0%, #F5D061 100%);
+    color: #092B45;
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    box-shadow: 0 6px 20px rgba(229, 180, 34, 0.3);
+    transition: all 0.3s ease;
+}
+
+.acm-dsp-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(229, 180, 34, 0.5);
+}
+
+/* Speaker Cards */
+.keynote-card {
+    border-radius: 24px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.keynote-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #092B45, #E5B422, #092B45);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.keynote-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 0 25px rgba(229, 180, 34, 0.18) !important;
+    border-color: rgba(229, 180, 34, 0.4) !important;
+}
+
+.keynote-card:hover::before {
+    opacity: 1;
+}
+
+/* Speaker Avatar Image Box */
+.speaker-img-wrapper {
+    width: 210px;
+    height: 210px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #E5B422;
+    box-shadow: 0 8px 25px rgba(9, 43, 69, 0.2), 0 0 15px rgba(229, 180, 34, 0.3);
+    background: #f3f4f6;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.keynote-card:hover .speaker-img-wrapper {
+    transform: scale(1.04);
+    box-shadow: 0 12px 30px rgba(9, 43, 69, 0.3), 0 0 25px rgba(229, 180, 34, 0.5);
+}
+
+.speaker-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.keynote-card:hover .speaker-img-wrapper img {
+    transform: scale(1.06);
+}
+
+/* Speaker Content & Titles */
+.speaker-title-box {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speaker-name {
+    font-weight: 800;
+    color: #092B45;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    line-height: 1.35;
+    transition: color 0.3s ease;
+}
+
+.speaker-affil-box {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speaker-affil {
+    color: #4B5563;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.6;
+    font-size: 0.98rem;
+}
+
+/* Speaker Action Button */
+.keynote-btn {
+    background: #092B45;
+    color: #ffffff !important;
+    border-radius: 30px;
+    padding: 10px 32px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(9, 43, 69, 0.25);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.keynote-btn:hover {
+    background: linear-gradient(135deg, #E5B422 0%, #F5D061 100%);
+    color: #092B45 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(229, 180, 34, 0.4);
+}
+
+/* --- HORIZONTAL DETAIL CARDS (keynotespeakers.html) --- */
+.keynote-detail-card {
+    border-radius: 22px;
+    background: #ffffff;
+    border: none;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    position: relative;
+}
+
+.keynote-detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #092B45, #E5B422, #092B45);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.keynote-detail-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.3), 0 0 20px rgba(229, 180, 34, 0.15);
+}
+
+.keynote-detail-card:hover::before {
+    opacity: 1;
+}
+
+/* Detail card image wrapper (rounded square for horizontal layout) */
+.keynote-detail-img {
+    width: 220px;
+    height: 220px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid #E5B422;
+    background: #f3f4f6;
+    box-shadow: 0 6px 20px rgba(9, 43, 69, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.keynote-detail-card:hover .keynote-detail-img {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(9, 43, 69, 0.25), 0 0 15px rgba(229, 180, 34, 0.3);
+}
+
+.keynote-detail-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Detail card speaker tag */
+.keynote-speaker-tag {
+    color: #E5B422;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+/* Detail card speaker name */
+.keynote-detail-name {
+    font-weight: 800;
+    color: #0b132b;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+/* Detail card speaker affiliation */
+.keynote-detail-affil {
+    color: #4b5563;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+/* Detail card speaker bio */
+.keynote-detail-bio {
+    color: #374151;
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 0.98rem;
+}
+
+/* Detail card button */
+.keynote-detail-btn {
+    background: #0b132b;
+    color: #ffffff !important;
+    border-radius: 30px;
+    padding: 10px 28px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(11, 19, 43, 0.25);
+}
+
+.keynote-detail-btn:hover {
+    background: linear-gradient(135deg, #E5B422 0%, #F5D061 100%);
+    color: #0b132b !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(229, 180, 34, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .keynote-detail-img {
+        width: 180px;
+        height: 180px;
+    }
+    .keynote-section {
+        padding: 70px 0 !important;
+    }
+}

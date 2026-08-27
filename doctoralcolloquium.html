@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctoral Colloquium | IS³A³ 2026</title>
+    
+    <link rel="icon" href="src/assets/logos/tulogo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/committee.css">
+    <link rel="stylesheet" href="src/styles/navbar.css">
+    <link rel="stylesheet" href="src/styles/doctoral.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-info-left">
+            <span><i class="fas fa-calendar-alt"></i> Nov 19–20, 2026</span>
+            <span class="d-none d-md-inline"><i class="fas fa-map-marker-alt"></i> Department of CSE, Tezpur University</span>
+        </div>
+        
+        <div class="top-info-right">
+            <a href="mailto:is3a3@tezu.ernet.in"><i class="fas fa-envelope"></i> is3a3@tezu.ernet.in</a>
+            <span>Tezpur, Assam, India</span>
+        </div>
+    </div>
+
+    <nav>
+        <a class="navbar-brand" href="index.html#home">
+            <img src="src/assets/logos/tulogo.png" alt="TU Logo" class="nav-logo-tu rounded shadow-sm">
+            <img src="src/assets/logos/LOGO2.png" alt="IS3A3 Icon" class="nav-logo-event rounded shadow-sm">
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="callforpapers.html">Call For Papers</a></li>
+            <li><a href="doctoralcolloquium.html">Doctoral Colloquium</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle d-flex align-items-center gap-1">
+                    People <i class="fas fa-chevron-down nav-arrow"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="keynotespeakers.html">Keynote Speaker</a></li>
+                    <li><a href="advisors.html">Advisory Board</a></li>
+                    <li><a href="technical.html">Technical Committee</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="registration-form.html" class="btn-header" target="_blank">Register Now</a></li>
+            <li class="d-none d-lg-flex align-items-center" style="margin-left: 10px; padding-right: 15px; border-right: 2px solid rgba(9, 43, 69, 0.1);">
+                <img src="src/assets/logos/meity logo.jpeg" alt="MeitY Logo" class="nav-logo-meity">
+            </li>
+        </ul>
+
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+    
+    <header class="page-banner">
+        <h2>Doctoral Colloquium</h2>
+        <div class="line"></div>
+        <p>A vibrant forum for PhD scholars to present, discuss, and refine their research tracks under expert mentorship.</p>
+    </header>
+    
+    <section class="section" id="colloquium">
+        <div class="container">
+
+            <!-- INTRODUCTION: FULL WIDTH -->
+            <div class="about-text doctoral-intro-card" data-aos="fade-right" 
+                 style="width: 100%; background: #ffffff; padding: 35px 40px; border-radius: 14px; box-shadow: var(--shadow); margin-bottom: 35px; border-left: 6px solid var(--accent);">
+                <h3 style="color: var(--primary); font-weight: 800; margin-bottom: 18px;">
+                    About the Doctoral Colloquium
+                </h3>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.8; text-align: justify;">
+                    <strong>IS³A³ 2026</strong> is delighted to host a Doctoral Colloquium, an exclusive forum for PhD scholars to showcase their innovation. The primary objective of the Doctoral Colloquium is to provide a platform for in-depth research discussions, constructive feedback, and professional mentoring while fostering interaction among emerging researchers and experts from academia and industry. The colloquium offers doctoral students a unique opportunity to present and discuss their ongoing research contributions across the broad thematic areas of IS³A³ 2026, including smart systems, artificial intelligence, cybersecurity, algorithms, optimization, and emerging interdisciplinary applications.
+                </p>
+            </div>
+
+            <!-- BELOW INTRO: GUIDELINES + PORTAL -->
+            <div class="colloquium-grid" style="display: grid; grid-template-columns: minmax(0, 2fr) minmax(280px, 0.8fr); gap: 30px; align-items: start;">
+
+                <div class="guidelines-wrapper">
+                    <h3>Submission Guidelines</h3>
+
+                    <div class="guideline-item">
+                        <div class="guideline-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="guideline-text">
+                            <h5>Eligibility</h5>
+                            <p>Senior doctoral students who have completed at least two years of their Ph.D. research work and have not yet submitted their thesis are eligible to participate in the Doctoral Colloquium.</p>
+                        </div>
+                    </div>
+
+                    <div class="guideline-item">
+                        <div class="guideline-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="guideline-text">
+                            <h5>Extended Abstract Format</h5>
+                            <p>Eligible participants are invited to submit a 2-page extended abstract highlighting their ongoing research contributions and outcomes achieved so far. The abstract must be prepared on standard A4 size paper with 1-inch top and bottom margins and 1.25-inch left and right margins. The document should use Times New Roman font with a minimum font size of 11 pt. Relevant figures, tables, and illustrations may be included wherever appropriate.</p>
+                            <p>The extended abstract should include the following components:</p>
+                            <ul>
+                                <li>Title, name, and affiliation of the candidate</li>
+                                <li>Name and affiliation of the supervisor(s)</li>
+                                <li>Background and motivation</li>
+                                <li>Problem statement</li>
+                                <li>Proposed methodology/approach</li>
+                                <li>Results or significant findings, if available</li>
+                                <li>Discussion and future research directions</li>
+                            </ul>
+                            <p><b><i>Participants are also required to submit a valid student identity card in PDF/JPG/PNG format, along with a certificate from the Head of the Department certifying that the candidate is in the final stage of Ph.D. research and is willing to participate in the IS³A³ 2026 Doctoral Colloquium.</i></b></p>
+                        </div>
+                    </div>
+
+                    <div class="guideline-item">
+                        <div class="guideline-icon"><i class="fas fa-user-shield"></i></div>
+                        <div class="guideline-text">
+                            <h5>Review Process</h5>
+                            <p>All submitted abstracts will be evaluated by an expert review committee. Based on reviewers’ scores, recommendations, and overall assessment, selected submissions will be invited for poster presentation during the Doctoral Colloquium.</p>
+                        </div>
+                    </div>
+
+                    <div class="guideline-item">
+                        <div class="guideline-icon"><i class="fas fa-award"></i></div>
+                        <div class="guideline-text">
+                            <h5>Awards</h5>
+                            <p>The Doctoral Colloquium will feature awards for outstanding poster presentations. The awards will recognize originality, research quality, innovation, and presentation effectiveness. Evaluation will be carried out by an expert panel considering both the technical merit of the submitted abstract and the clarity and impact of the presentation.</p>
+                        </div>
+                    </div>
+
+                    <div class="guideline-item">
+                        <div class="guideline-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="guideline-text">
+                            <h5>Important Dates</h5>
+                            <p><strong>Submission Deadline:</strong> October 15, 2026<br>
+                            <strong>Notification of Acceptance:</strong> October 31, 2026</p>
+                        </div>
+                    </div>
+
+                    <div class="guideline-item">
+                        <div class="guideline-icon"><i class="fas fa-id-card"></i></div>
+                        <div class="guideline-text">
+                            <h5>Registration</h5>
+                            <p>At least one author registration is mandatory for every accepted Doctoral Colloquium presentation. However, if the candidate has already registered under a regular symposium paper, no separate registration is required. Poster presentations will be scheduled only if the primary doctoral student author is registered for the symposium.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coming-soon-card" style="position: sticky; top: 110px;">
+                    <div class="coming-soon-icon">
+                        <i class="fas fa-folder-minus"></i>
+                    </div>
+                    <h4>Submission Portal</h4>
+                    <p>The submission link for the Doctoral Colloquium track will be updated here after integration with the conference management system.</p>
+                    <a href="#" class="btn btn-accent text-center" style="margin-top: 18px;">
+                        <i class="fas fa-paper-plane me-2"></i>Coming Soon
+                    </a>
+                    <div class="update-badge" style="margin-top: 18px;">
+                        <i class="fas fa-sync-alt fa-spin me-2"></i> Visit Regularly to Stay Updated
+                    </div>
+                </div>
+
+            </div>
+
+            <style>
+                @media (max-width: 991px) {
+                    #colloquium .colloquium-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                    #colloquium .coming-soon-card {
+                        position: static !important;
+                    }
+                    #colloquium .doctoral-intro-card {
+                        padding: 25px 22px !important;
+                    }
+                }
+            </style>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="src/assets/logos/LOGO2.png" alt="IS³A³ 2026 Logo" style="height: 130px; width: auto; background: white; padding: 10px; border-radius: 4px; margin-bottom: 20px;">
+                    <p>The leading international symposium dedicated to the advancement of smart systems and algorithmic research.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/department-of-computer-science-and-engineering-tezpur-university-3316ab21a "><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+               <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Symposium</a></li>
+                        <li><a href="keynotespeakers.html">Keynote Speakers</a></li>
+                        <li><a href="index.html#deadlines">Important Dates</a></li>
+                    </ul>
+                
+                    <h4 style="margin-top: 25px;">Contact Us</h4>
+                    <ul>
+                        <li><a href="mailto:is3a3@tezu.ernet.in"><i class="fas fa-envelope" style="margin-right: 10px; color: var(--accent);"></i> is3a3@tezu.ernet.in</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--accent);"></i> Tezpur, Assam, India</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="callforpapers.html">Call for Papers</a></li>
+                        <li><a href="callforpapers.html">Submission Portal</a></li>
+                        <li><a href="index.html#registration">Registration Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Academic Partner</h4>
+                    <a href="https://conferencealerts.co.in/" target="_blank">
+                        <img src="src/assets/logos/conferencealerts.jpg" alt="Academic Partner Logo" style="max-width: 220px; width: 100%; height: auto; background: white; padding: 8px; border-radius: 8px; margin-top: 10px; display: inline-block; transition: var(--transition);">
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">© 2026 IS³A³ Symposium. All Rights Reserved. | Designed & Developed by Tushar Bharali & Swarup Roy</p>
+        </div>
+    </footer>
+
+    <a href="#colloquium" style="position: fixed; bottom: 30px; right: 30px; background: var(--primary); border: 2px solid var(--accent); color: var(--accent); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: var(--shadow); z-index: 999; transition: var(--transition);">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="src/scripts/main.js"></script>
+
+</body>
+</html>

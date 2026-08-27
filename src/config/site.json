@@ -1,0 +1,13 @@
+{
+    "siteName": "IS3A3 2026",
+    "fullName": "International Symposium on Smart Systems, Algorithms & Applications",
+    "year": "2026",
+    "theme": {
+        "primary": "#002D62",
+        "accent": "#B08D57"
+    },
+    "contact": {
+        "email": "info@is3a3.org",
+        "location": "Tezpur, Assam, India"
+    }
+}
