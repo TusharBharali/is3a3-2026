@@ -44,6 +44,27 @@
     min-height: 100vh;
 }
 
+/* Page Banner Tuning for Registration Form */
+.registration-page-body .page-banner {
+    padding: 210px 20px 75px 20px;
+    background: linear-gradient(rgba(9, 43, 69, 0.88), rgba(9, 43, 69, 0.96)), 
+                url('../assets/images/DEPARTOFCSE.jpg');
+    background-size: cover; 
+    background-position: center; 
+    text-align: center;
+}
+
+.registration-page-body .page-banner h2 {
+    font-size: 3.2rem;
+    margin-bottom: 18px;
+}
+
+.registration-page-body .page-banner p {
+    margin-bottom: 0;
+    font-size: 1.15rem;
+    max-width: 720px;
+}
+
 /* Banner Sub-Navigation / Breadcrumb */
 .form-hero-badge {
     display: inline-flex;
@@ -52,19 +73,19 @@
     background: rgba(229, 180, 34, 0.15);
     border: 1px solid rgba(229, 180, 34, 0.35);
     color: var(--accent);
-    padding: 6px 18px;
+    padding: 8px 22px;
     border-radius: var(--radius-full);
-    font-size: 0.82rem;
+    font-size: 0.84rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* Main Form Wrapper */
+/* Main Form Wrapper - Clean Downward Spacing (No Overlap) */
 .form-main-container {
     max-width: 1280px;
-    margin: -40px auto 80px auto;
+    margin: 50px auto 100px auto;
     padding: 0 20px;
     position: relative;
     z-index: 10;
@@ -151,6 +172,16 @@
 }
 
 @media (max-width: 768px) {
+    .registration-page-body .page-banner {
+        padding: 170px 16px 50px 16px;
+    }
+    .registration-page-body .page-banner h2 {
+        font-size: 2.2rem;
+    }
+    .form-main-container {
+        margin: 25px auto 60px auto;
+        padding: 0 12px;
+    }
     .form-body {
         padding: 24px 18px;
     }
