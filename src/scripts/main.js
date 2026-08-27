@@ -41,8 +41,8 @@ function initMobileMenu() {
  */
 function initScrollAnimations() {
     const observerOptions = { 
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px 0px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -53,12 +53,17 @@ function initScrollAnimations() {
         });
     }, observerOptions);
 
-    // Apply data-aos attribute dynamically if not present, then observe
+    // 1. Observe all elements with explicit data-aos attribute
+    document.querySelectorAll('[data-aos]').forEach(el => {
+        observer.observe(el);
+    });
+
+    // 2. Apply data-aos attribute dynamically to major layout elements if not present, then observe
     document.querySelectorAll('section, .grid, .card, .committee-card').forEach(el => {
         if (!el.hasAttribute('data-aos')) {
             el.setAttribute('data-aos', 'fade-up');
+            observer.observe(el);
         }
-        observer.observe(el);
     });
 }
 
